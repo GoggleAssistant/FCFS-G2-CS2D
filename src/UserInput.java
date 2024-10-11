@@ -272,7 +272,7 @@ public class UserInput extends JFrame {
                     throw new NumberFormatException("Burst time must be positive");
                 }
             } catch (NumberFormatException ex) {
-                JOptionPane.showMessageDialog(null, "Invalid input for Process " + (i + 1) + ". Please enter valid numbers.", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Invalid input for Process " + (i + 1) + ". Please enter valid integers.", "Error", JOptionPane.ERROR_MESSAGE);
                 return;
             }
         }

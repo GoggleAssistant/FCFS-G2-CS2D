@@ -32,7 +32,7 @@ public class GanttChartGeneration {
 
         // Create the Gantt chart panel (now called progress bar)
         progressBar = new JPanel(null); // Use null layout
-        progressBar.setBackground(Color.GRAY);
+        progressBar.setBackground(Color.DARK_GRAY);
 
         // Calculate the position to center the panel horizontally and raise it vertically
         int x = (1100 - 1000) / 2;
@@ -172,7 +172,7 @@ public class GanttChartGeneration {
             // Add number label to the unit bar
             JLabel label = new JLabel("| " + position);
             label.setHorizontalAlignment(SwingConstants.LEFT);
-            label.setFont(new Font("Arial", Font.PLAIN, 10));
+            label.setFont(new Font("Arial", Font.PLAIN, 12));
             unit.add(label, BorderLayout.WEST);
         }
 
@@ -309,7 +309,7 @@ public class GanttChartGeneration {
         int totalTime = totalTime();
         
         JLabel finalTimeLabel = new JLabel("| " + totalTime);
-        finalTimeLabel.setFont(new Font("Arial", Font.PLAIN, 10));
+        finalTimeLabel.setFont(new Font("Arial", Font.PLAIN, 12));
         finalTimeLabel.setHorizontalAlignment(SwingConstants.LEFT);
         finalTimeLabel.setBackground(Color.WHITE); // Set background to white
         finalTimeLabel.setOpaque(true); // Make the label opaque to show the background color
@@ -351,8 +351,5 @@ public class GanttChartGeneration {
         frame.add(avgTurnaroundTimeValue);
     }
 
-    private void updateAverageTimeLabels() {
-        avgWaitingTimeValue.setText(String.format("%.2f", avgWaitingTime));
-        avgTurnaroundTimeValue.setText(String.format("%.2f", avgTurnaroundTime));
-    }
+
 }
